@@ -1,0 +1,34 @@
+FUNCION BEGIN{
+
+FLOAT primero,segundo;
+FLOAT resultado;
+NUM verifica;
+
+SEND(#  Programa que calcula Divisiones  #);
+WHEN (verifica<2){
+TOMAR(#Dame el primer numero: #+primero);
+TOMAR(#Dame el segundo numero: #+segundo);
+resultado=primero/segundo;
+
+IF(primero=0){
+verifica=verifica+1;
+IF(segundo=0){
+verifica=verifica+1;
+SEND(#No puedo dividir entre 0#);
+FINISH}
+FINISH}
+
+IF(segundo>0){
+SEND(#El Resultado es: #+resultado);
+
+FINISH}
+
+
+SEND (# Ya acabe#);
+SWHEN}
+
+
+
+
+
+END}
